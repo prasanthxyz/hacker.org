@@ -1,0 +1,1 @@
+print("my_username"[::-1])
