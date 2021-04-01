@@ -1,0 +1,24 @@
+Work:
+
+| Step | PC      | Operation                                  | Code          |
+|------|---------|--------------------------------------------|---------------|
+| 1    | 1  - 13 | Store -(9*9*9*9) as MAX (loc N+1)          | 099*9*9*-73*> |
+| 2    | 14 - 20 | Push N to Memory (loc N)                   | 54*54*>       |
+| 3    | 21 - 24 | Read N to stack (loc N)                    | 54*<          |
+| 4    | 25 - 26 | subtract 1                                 | 1-            |
+| 5    | 27 - 30 | Store N back (loc N)                       | 54*>          |
+| 6    | 31 - 34 | Read N to stack (loc N)                    | 54*<          |
+| 7    | 35 - 38 | Compare to -1 (end condition)              | 01-:          |
+| 8    | 39 - 44 | If same, PC to Print&Quit (step 16)        | 93*6+?        |
+| 9    | 45 - 48 | Read max val to stack (loc N+1)            | 73*<          |
+| 10   | 49 - 53 | Read idx to stack (loc N) and idxd value   | 54*<<         |
+| 11   | 54 - 54 | Compare to current value                   | :             |
+| 12   | 55 - 60 | If greater, PC > step 15 (skip update MAX) | 1:63+?        |
+| 13   | 61 - 65 | Read idx to stack (loc N) and idxd value   | 54*<<         |
+| 14   | 66 - 69 | Set it as max value (loc N+1)              | 73*>          |
+| 15   | 70 - 77 | PC to step 3                               | 086*9+-g      |
+| 16   | 78 - 82 | Print max value (loc N+1)                  | 73*<p         |
+| 17   | 83 - 84 | EXIT                                       | !             |
+
+Solution:
+099*9*9*-73*>54*54*>54*<1-54*>54*<01-:93*6+?73*<54*<<:1:63+?54*<<73*>086*9+-g73*<p!

@@ -1,0 +1,19 @@
+Work:
+
+| Step | PC      | Operation                    | Code     |
+|------|---------|------------------------------|----------|
+| 1    | 0 - 1   | Set idx1 as 0                | 0        |
+| 2    | 2 - 5   | Set idx2 as (idx1+1)         | 0^1+     |
+| 3    | 6 - 8   | Get idx1-th number           | 1^<      |
+| 4    | 9 - 11  | Get idx2-th number           | 1^<      |
+| 5    | 12 - 16 | If same, goto step 12        | :55*?    |
+| 6    | 17 - 18 | Increment idx2               | 1+       |
+| 7    | 19 - 26 | If idx2 < 12, then:          | 0^62*:1+ |
+| 8    | 27 - 32 | goto step 3                  | 093*-?   |
+| 9    | 33 - 33 | Drop idx2                    | d        |
+| 10   | 34 - 35 | Increment idx1               | 1+       |
+| 11   | 36 - 41 | goto step 2                  | 085*-g   |
+| 12   | 42 - 45 | Get idx1-th number and print | 1^<p     |
+
+Solution:
+00^1+1^<1^<:55*?1+0^62*:1+093*-?d1+085*-g1^<p

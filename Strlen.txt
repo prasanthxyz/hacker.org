@@ -1,0 +1,13 @@
+Work:
+
+| Step | PC      | Operation                        | Code   |
+|------|---------|----------------------------------|--------|
+| 1    | 0  - 1  | Keep 0 in stack (as idx)         | 0      |
+| 2    | 2  - 4  | Copy idx and get idxd value      | 0^<    |
+| 3    | 5  - 6  | If 0, GOTO print & exit (step 6) | 8?     |
+| 4    | 7  - 8  | Increment idx                    | 1+     |
+| 5    | 9  - 14 | GOTO step 2                      | 085+-g |
+| 6    | 15 - 16 | Print idx                        | p      |
+
+Solution:
+00^<8?1+085+-gp

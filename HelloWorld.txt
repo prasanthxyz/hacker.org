@@ -1,0 +1,21 @@
+Work:
+Ascii codes = [72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100]
+Need to push these to the stack and call 'P' after each push, and pop
+
+| Step | PC      | Operation                   | Code       |
+|------|---------|-----------------------------|------------|
+| 1    | 0 - 4   | Push 72 to stack and print  | 98*P       |
+| 2    | 5 - 12  | Push 101 to stack and print | 99*54*+P   |
+| 3    | 13 - 20 | Push 108 to stack and print | 99*93*+P   |
+| 4    | 21 - 28 | Push 108 to stack and print | 99*93*+P   |
+| 5    | 29 - 36 | Push 111 to stack and print | 99*65*+P   |
+| 6    | 37 - 42 | Push 44 to stack and print  | 85*4+P     |
+| 7    | 43 - 46 | Push 32 to stack and print  | 84*P       |
+| 8    | 47 - 52 | Push 87 to stack and print  | 99*6+P     |
+| 9    | 53 - 60 | Push 111 to stack and print | 99*65*+P   |
+| 10   | 61 - 70 | Push 114 to stack and print | 99*65*+3+P |
+| 11   | 71 - 78 | Push 108 to stack and print | 99*93*+P   |
+| 12   | 79 - 17 | Push 100 to stack and print | 99*63*+1+P |
+
+Solution:
+98*P99*54*+P99*93*+P99*93*+P99*65*+P85*4+P84*P99*6+P99*65*+P99*65*+3+P99*93*+P99*63*+1+P

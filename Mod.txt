@@ -1,0 +1,14 @@
+Work:
+
+| Step | PC      | Operation              | Code |
+|------|---------|------------------------|------|
+| 1    | 0 - 2   | Get A to stack         | 0<   |
+| 2    | 3 - 4   | Make copy              | 0^   |
+| 3    | 5 - 5   | Get N to stack         | 1<   |
+| 4    | 6 - 9   | Divide A/N (result)    | /    |
+| 5    | 10 - 17 | Get N to stack         | 1<   |
+| 6    | 18 - 21 | Multiply N*result      | *    |
+| 7    | 22 - 27 | Subtract from A, print | -p   |
+
+Solution:
+0<0^1</1<*-p
