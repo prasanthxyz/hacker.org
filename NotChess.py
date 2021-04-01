@@ -48,13 +48,34 @@ def encodeIt(text):
 
 charset = 'abcdefghijklmnopqrstuvwxyz%1234567890'
 def decodeChunk(code):
-    resultList = [charset, charset, charset]
+    resultList = [list(charset), ['x'], ['x']]
+
+    for iteration in range(3):
+        combinations = itertools.product(*resultList)
+        temp = []
+        for c in combinations:
+            text = ''.join(c)
+            if code.startswith(encodeIt(text)[:iteration+1]):
+                temp.append(text[iteration])
+        resultList[iteration] = temp[:]
+        if iteration != 2:
+            resultList[iteration+1] = list(charset)
+
     combinations = itertools.product(*resultList)
     for c in combinations:
         text = ''.join(c)
         if encodeIt(text) == code:
             return text
     return ''
+
+# def decodeChunk(code):
+#     resultList = [charset, charset, charset]
+#     combinations = itertools.product(*resultList)
+#     for c in combinations:
+#         text = ''.join(c)
+#         if encodeIt(text) == code:
+#             return text
+#     return ''
 
 result = ''
 for i in range(0, len(code), 4):
